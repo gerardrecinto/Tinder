@@ -37,7 +37,7 @@ class CardsViewController: UIViewController {
       sender.view?.center = CGPoint(x: self.cardInitialCenter.x + translation.x, y: self.cardInitialCenter.y)
 
 
-    } else if (sender as AnyObject).state == .ended {
+    } else if sender.state == .ended {
       if(translation.x > 80){
         UIView.animate(withDuration: 0.3, animations: { 
           let destination = CGPoint(x: 1000, y: self.cardInitialCenter.y)
