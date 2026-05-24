@@ -35,13 +35,15 @@ class CardsViewController: UIViewController {
 
     } else if sender.state == .ended {
       if(translation.x > 80){
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: 0.3, animations: { [weak self] in
+          guard let self = self else { return }
           let destination = CGPoint(x: 1000, y: self.cardInitialCenter.y)
           sender.view?.center = destination
         })
 
       } else if (translation.x < -80){
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: 0.3, animations: { [weak self] in
+          guard let self = self else { return }
           let destination = CGPoint(x: -1000, y: self.cardInitialCenter.y)
           sender.view?.center = destination
         })
