@@ -1,7 +1,7 @@
 # Tinder Swipe UI
 
-![Swift](https://img.shields.io/badge/Swift-3.0-F05138?logo=swift&logoColor=white)
-![iOS 9+](https://img.shields.io/badge/iOS-9%2B-000000?logo=apple&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-6.0-F05138?logo=swift&logoColor=white)
+![iOS 16+](https://img.shields.io/badge/iOS-16%2B-000000?logo=apple&logoColor=white)
 ![UIKit](https://img.shields.io/badge/UIKit-Gestures%20%26%20Animation-blue)
 
 ![Demo](docs/assets/demo2.gif)
@@ -21,7 +21,7 @@
 
 | Layer | Technology |
 |---|---|
-| Language | Swift 3.0 |
+| Language | Swift 6.0 |
 | UI | UIKit, UIImageView |
 | Gesture | UIPanGestureRecognizer, UITapGestureRecognizer |
 | Transform | CGAffineTransform (rotation), CGPoint center manipulation |
@@ -47,4 +47,4 @@ git clone https://github.com/gerardrecinto/tinder-swipe-ui.git
 open tinder-swipe-ui/Tinder.xcodeproj
 ```
 
-Build and run on the iOS Simulator (Xcode 8+). No dependencies or API keys required.
+Build and run on the iOS Simulator (Xcode 16+). No dependencies or API keys required.

@@ -19,11 +19,7 @@ class CardsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
   @IBAction func onTap(_ sender: Any) {
   performSegue(withIdentifier: "passSegue", sender: nil)
   }
@@ -33,17 +29,17 @@ class CardsViewController: UIViewController {
     if (sender).state == .changed {
       let rotate = CGAffineTransform(rotationAngle: translation.x/180)
       sender.view?.transform = rotate
-      
+
       sender.view?.center = CGPoint(x: self.cardInitialCenter.x + translation.x, y: self.cardInitialCenter.y)
 
 
     } else if sender.state == .ended {
       if(translation.x > 80){
-        UIView.animate(withDuration: 0.3, animations: { 
+        UIView.animate(withDuration: 0.3, animations: {
           let destination = CGPoint(x: 1000, y: self.cardInitialCenter.y)
           sender.view?.center = destination
         })
-        
+
       } else if (translation.x < -80){
         UIView.animate(withDuration: 0.3, animations: {
           let destination = CGPoint(x: -1000, y: self.cardInitialCenter.y)
@@ -53,7 +49,7 @@ class CardsViewController: UIViewController {
         sender.view?.center = self.cardInitialCenter
         sender.view?.transform = .identity
       }
-      
+
     }
   }
     /*
